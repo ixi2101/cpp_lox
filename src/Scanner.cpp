@@ -1,7 +1,9 @@
 #include "lox/Scanner.h"
 #include "lox/TokenType.h"
+#include "lox/Exceptions.h"
 #include <cctype>
 #include <cstddef>
+#include <exception>
 #include <iterator>
 #include <unordered_map>
 #include <vector>
@@ -42,6 +44,9 @@ static const std::unordered_map<std::string, TokenType> reserved_keywords = {
 };
 
 std::vector<Token> Scanner::scanTokens(){
+    if (m_src.empty()){
+        throw lox::EmptySrcString();
+    }
     std::vector<Token> tokens;
 
     auto end = m_src.cend();
