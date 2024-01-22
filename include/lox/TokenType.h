@@ -3,44 +3,70 @@
 
 #include <string_view>
 enum TokenType {
-    // single char tokens
-    LEFT_PAREN, RIGHT_PAREN, LEFT_BRACE, RIGHT_BRACE,
-    COMMA, DOT, MINUS, PLUS, SEMICOLON, SLASH, STAR,
+  // single char tokens
+  LEFT_PAREN,
+  RIGHT_PAREN,
+  LEFT_BRACE,
+  RIGHT_BRACE,
+  COMMA,
+  DOT,
+  MINUS,
+  PLUS,
+  SEMICOLON,
+  SLASH,
+  STAR,
 
-    // one or 2 char tolens
-    BANG, BANG_EQUAL,
-    EQUAL, EQUAL_EQUAL,
-    GREATER, GREATER_EQUAL,
-    LESS, LESS_EQUAL,
+  // one or 2 char tolens
+  BANG,
+  BANG_EQUAL,
+  EQUAL,
+  EQUAL_EQUAL,
+  GREATER,
+  GREATER_EQUAL,
+  LESS,
+  LESS_EQUAL,
 
-    // literals
-    IDENTIFIER, STRING, NUMBER,
+  // literals
+  IDENTIFIER,
+  STRING,
+  NUMBER,
 
-    //keywords
-    AND, CLASS, ELSE, FALSE, FUN, FOR, IF, NIL, OR,
-    PRINT, RETURN, SUPER, THIS, TRUE, VAR, WHILE,
+  // keywords
+  AND,
+  CLASS,
+  ELSE,
+  FALSE,
+  FUN,
+  FOR,
+  IF,
+  NIL,
+  OR,
+  PRINT,
+  RETURN,
+  SUPER,
+  THIS,
+  TRUE,
+  VAR,
+  WHILE,
 
-    _EOF
+  _EOF
 
 };
 
 constexpr std::string_view TOKENSTR[] = {
     // single char tokens
-    "LEFT_PAREN", "RIGHT_PAREN", "LEFT_BRACE", "RIGHT_BRACE",
-    "COMMA", "DOT", "MINUS", "PLUS", "SEMICOLON", "SLASH", "STAR",
+    "LEFT_PAREN", "RIGHT_PAREN", "LEFT_BRACE", "RIGHT_BRACE", "COMMA", "DOT",
+    "MINUS", "PLUS", "SEMICOLON", "SLASH", "STAR",
 
     // one or 2 char tolens
-    "BANG", "BANG_EQUAL",
-    "EQUAL", "EQUAL_EQUAL",
-    "GREATER", "GREATER_EQUAL",
+    "BANG", "BANG_EQUAL", "EQUAL", "EQUAL_EQUAL", "GREATER", "GREATER_EQUAL",
     "LESS", "LESS_EQUAL",
     // literals
     "IDENTIFIER", "STRING", "NUMBER",
-    //keywords
-    "AND", "CLASS", "ELSE", "FALSE", "FUN", "FOR", "IF", "NIL", "OR",
-    "PRINT", "RETURN", "SUPER", "THIS", "TRUE", "VAR", "WHILE",
+    // keywords
+    "AND", "CLASS", "ELSE", "FALSE", "FUN", "FOR", "IF", "NIL", "OR", "PRINT",
+    "RETURN", "SUPER", "THIS", "TRUE", "VAR", "WHILE",
 
-    "_EOF"
-};
+    "_EOF"};
 
 #endif

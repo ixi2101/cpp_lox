@@ -20,7 +20,6 @@ target_include_directories(liblox PUBLIC include)
 
 add_executable(lox main.cpp)
 
-target_compile_options(lox PRIVATE -Wall -Wextra -Wpedantic -Werror)
 target_link_libraries(lox liblox bfg::lyra)
 
 add_subdirectory(test)

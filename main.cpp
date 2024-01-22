@@ -10,7 +10,7 @@
 int main(int argc, char *argv[]) {
   std::string file_path;
   bool show_help;
-
+ 
   auto cli =
       lyra::cli() |
       lyra::opt(file_path, "filePath")["-f"]["--filepath"]("file to execute") |

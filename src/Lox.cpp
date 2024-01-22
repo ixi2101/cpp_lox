@@ -30,11 +30,10 @@ void Lox::runPrompt() {
 void Lox::run(std::string &src) {
   Scanner scanner(src, this);
   std::vector<Token> tokens = scanner.scanTokens();
-    std::cout << "printing tokens:: " << std::endl;
-  for (Token& token: tokens){
+  std::cout << "printing tokens:: " << std::endl;
+  for (Token &token : tokens) {
     token.printToken();
   }
-  
 }
 
 void Lox::report(size_t line, std::string where, std::string_view reason) {
